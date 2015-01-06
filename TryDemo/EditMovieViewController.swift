@@ -182,9 +182,9 @@ class EditMovieViewController: UIViewController{
             println("Cannot combine a video shot in portrait mode with landscape mode")
 //            return;
         }
-        
-        println("transform1 a:\(transform1.a) b:\(transform1.b) c:\(transform1.c) d:\(transform1.d)" )
-        println("transform2 a:\(transform2.a) b:\(transform2.b) c:\(transform2.c) d:\(transform2.d)" )
+//        
+//        println("transform1 a:\(transform1.a) b:\(transform1.b) c:\(transform1.c) d:\(transform1.d)" )
+//        println("transform2 a:\(transform2.a) b:\(transform2.b) c:\(transform2.c) d:\(transform2.d)" )
 
         
         
@@ -246,6 +246,14 @@ class EditMovieViewController: UIViewController{
                 error: nil)!
             .URLByAppendingPathComponent(kDateFormatter!.stringFromDate( NSDate() ) )
             .URLByAppendingPathExtension( UTTypeCopyPreferredTagWithClass( AVFileTypeQuickTimeMovie , kUTTagClassFilenameExtension).takeRetainedValue() )
+        
+        if NSFileManager.defaultManager().fileExistsAtPath(exporter.outputURL.path!) {
+            var error: NSError? = nil
+            if NSFileManager.defaultManager().removeItemAtPath(exporter.outputURL.path!, error: &error) == false{
+                println("remove item at path \(exporter.outputURL) error: \(error) ")
+            }
+        }
+        
         
         exporter.outputFileType = AVFileTypeQuickTimeMovie
 

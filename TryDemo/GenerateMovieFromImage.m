@@ -163,6 +163,7 @@ static inline double radians (double degrees) {return degrees * M_PI/180;}
                 
 //                CGImageRelease(image2);
                 
+                
                 if (sampleBuffer) {
                     CMTime frameTime = CMTimeMake(150,30);
                     if(! [adaptor appendPixelBuffer:sampleBuffer withPresentationTime:kCMTimeZero]){
