@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "+[GenerateMovieFromImage newPixelBufferFromCGImage:]:GenerateMovieFromImage.m">
+      </ContextState>
+      <ContextState
+         contextName = "+[GenerateMovieFromImage generateMovieWithImage:completionBlock:]:GenerateMovieFromImage.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "CGImageGetWidth(image)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "+[GenerateMovieFromImage createCGImageFromFile:]:GenerateMovieFromImage.m">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

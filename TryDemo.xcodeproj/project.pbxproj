@@ -7,13 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB1650801A3164E200AB25DD /* MoviePreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB16507F1A3164E200AB25DD /* MoviePreviewView.swift */; };
+		CB1650821A31652700AB25DD /* EditMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1650811A31652700AB25DD /* EditMovieViewController.swift */; };
+		CB5C77241A2D68A5007ACD7E /* TakeMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5C77231A2D68A5007ACD7E /* TakeMovieViewController.swift */; };
+		CB5C77281A2DA4E5007ACD7E /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5C77271A2DA4E5007ACD7E /* MainTabViewController.swift */; };
+		CB5C772B1A2E0C9C007ACD7E /* PreTakeMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5C772A1A2E0C9C007ACD7E /* PreTakeMovieViewController.swift */; };
+		CB63A5C31A3EEB9B0091B62B /* img1.JPG in Resources */ = {isa = PBXBuildFile; fileRef = CB63A5C21A3EEB9B0091B62B /* img1.JPG */; };
+		CB63A5C71A3EF0460091B62B /* img3.JPG in Resources */ = {isa = PBXBuildFile; fileRef = CB63A5C61A3EF0460091B62B /* img3.JPG */; };
+		CBB38B601A2F10B600610CB1 /* TakeMovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB38B5F1A2F10B600610CB1 /* TakeMovieView.swift */; };
 		CBC042691A25FC8800597951 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC042681A25FC8800597951 /* AppDelegate.swift */; };
-		CBC0426B1A25FC8800597951 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC0426A1A25FC8800597951 /* FirstViewController.swift */; };
-		CBC0426D1A25FC8800597951 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC0426C1A25FC8800597951 /* SecondViewController.swift */; };
+		CBC0426B1A25FC8800597951 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC0426A1A25FC8800597951 /* HomeViewController.swift */; };
+		CBC0426D1A25FC8800597951 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC0426C1A25FC8800597951 /* AccountViewController.swift */; };
 		CBC042701A25FC8800597951 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBC0426E1A25FC8800597951 /* Main.storyboard */; };
 		CBC042721A25FC8800597951 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBC042711A25FC8800597951 /* Images.xcassets */; };
 		CBC042751A25FC8800597951 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBC042731A25FC8800597951 /* LaunchScreen.xib */; };
 		CBC042811A25FC8800597951 /* TryDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC042801A25FC8800597951 /* TryDemoTests.swift */; };
+		CBD847521A354A31002A261A /* GenerateMovieFromImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD847511A354A31002A261A /* GenerateMovieFromImage.swift */; };
+		CBD847551A359162002A261A /* GenerateMovieFromImage.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD847541A359162002A261A /* GenerateMovieFromImage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,17 +37,29 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CB16507F1A3164E200AB25DD /* MoviePreviewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviePreviewView.swift; sourceTree = "<group>"; };
+		CB1650811A31652700AB25DD /* EditMovieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditMovieViewController.swift; sourceTree = "<group>"; };
+		CB5C77231A2D68A5007ACD7E /* TakeMovieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakeMovieViewController.swift; sourceTree = "<group>"; };
+		CB5C77271A2DA4E5007ACD7E /* MainTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
+		CB5C772A1A2E0C9C007ACD7E /* PreTakeMovieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreTakeMovieViewController.swift; sourceTree = "<group>"; };
+		CB63A5C21A3EEB9B0091B62B /* img1.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img1.JPG; sourceTree = "<group>"; };
+		CB63A5C61A3EF0460091B62B /* img3.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img3.JPG; sourceTree = "<group>"; };
+		CBB38B5F1A2F10B600610CB1 /* TakeMovieView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakeMovieView.swift; sourceTree = "<group>"; };
 		CBC042631A25FC8800597951 /* TryDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TryDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBC042671A25FC8800597951 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBC042681A25FC8800597951 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CBC0426A1A25FC8800597951 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		CBC0426C1A25FC8800597951 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		CBC0426A1A25FC8800597951 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		CBC0426C1A25FC8800597951 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		CBC0426F1A25FC8800597951 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CBC042711A25FC8800597951 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CBC042741A25FC8800597951 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		CBC0427A1A25FC8800597951 /* TryDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TryDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBC0427F1A25FC8800597951 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBC042801A25FC8800597951 /* TryDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TryDemoTests.swift; sourceTree = "<group>"; };
+		CBD847511A354A31002A261A /* GenerateMovieFromImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerateMovieFromImage.swift; sourceTree = "<group>"; };
+		CBD847531A359162002A261A /* TryDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TryDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		CBD847541A359162002A261A /* GenerateMovieFromImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GenerateMovieFromImage.m; sourceTree = "<group>"; };
+		CBD847561A35AE6F002A261A /* GenerateMovieFromImage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GenerateMovieFromImage.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +80,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CB16507E1A3164A200AB25DD /* EditMovie */ = {
+			isa = PBXGroup;
+			children = (
+				CB16507F1A3164E200AB25DD /* MoviePreviewView.swift */,
+				CB1650811A31652700AB25DD /* EditMovieViewController.swift */,
+				CBD847561A35AE6F002A261A /* GenerateMovieFromImage.h */,
+				CBD847541A359162002A261A /* GenerateMovieFromImage.m */,
+				CBD847531A359162002A261A /* TryDemo-Bridging-Header.h */,
+				CBD847511A354A31002A261A /* GenerateMovieFromImage.swift */,
+			);
+			name = EditMovie;
+			sourceTree = "<group>";
+		};
+		CB1650831A3166C300AB25DD /* TakeMovie */ = {
+			isa = PBXGroup;
+			children = (
+				CBB38B5F1A2F10B600610CB1 /* TakeMovieView.swift */,
+				CB5C77231A2D68A5007ACD7E /* TakeMovieViewController.swift */,
+			);
+			name = TakeMovie;
+			sourceTree = "<group>";
+		};
+		CB1650841A3166E200AB25DD /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				CB5C77271A2DA4E5007ACD7E /* MainTabViewController.swift */,
+				CBC0426A1A25FC8800597951 /* HomeViewController.swift */,
+				CBC0426C1A25FC8800597951 /* AccountViewController.swift */,
+				CB5C772A1A2E0C9C007ACD7E /* PreTakeMovieViewController.swift */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
 		CBC0425A1A25FC8800597951 = {
 			isa = PBXGroup;
 			children = (
@@ -80,9 +135,12 @@
 			isa = PBXGroup;
 			children = (
 				CBC042681A25FC8800597951 /* AppDelegate.swift */,
-				CBC0426A1A25FC8800597951 /* FirstViewController.swift */,
-				CBC0426C1A25FC8800597951 /* SecondViewController.swift */,
+				CB1650841A3166E200AB25DD /* Home */,
+				CB1650831A3166C300AB25DD /* TakeMovie */,
+				CB16507E1A3164A200AB25DD /* EditMovie */,
 				CBC0426E1A25FC8800597951 /* Main.storyboard */,
+				CB63A5C21A3EEB9B0091B62B /* img1.JPG */,
+				CB63A5C61A3EF0460091B62B /* img3.JPG */,
 				CBC042711A25FC8800597951 /* Images.xcassets */,
 				CBC042731A25FC8800597951 /* LaunchScreen.xib */,
 				CBC042661A25FC8800597951 /* Supporting Files */,
@@ -125,6 +183,7 @@
 				CBC0425F1A25FC8800597951 /* Sources */,
 				CBC042601A25FC8800597951 /* Frameworks */,
 				CBC042611A25FC8800597951 /* Resources */,
+				CBC0428A1A2606B900597951 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -196,7 +255,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBC042701A25FC8800597951 /* Main.storyboard in Resources */,
+				CB63A5C31A3EEB9B0091B62B /* img1.JPG in Resources */,
 				CBC042751A25FC8800597951 /* LaunchScreen.xib in Resources */,
+				CB63A5C71A3EF0460091B62B /* img3.JPG in Resources */,
 				CBC042721A25FC8800597951 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -210,14 +271,38 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		CBC0428A1A2606B900597951 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export CODESIGN_ALLOCATE=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/codesign_allocate\nif [ \"${PLATFORM_NAME}\" == \"iphoneos\" ] || [ \"${PLATFORM_NAME}\" == \"ipados\" ]; then\n/Applications/Xcode.app/Contents/Developer/iphoneentitlements/gen_entitlements.py \"my.company.${PROJECT_NAME}\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${PROJECT_NAME}.xcent\";\ncodesign -f -s \"iPhone Developer\" --entitlements \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${PROJECT_NAME}.xcent\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CBC0425F1A25FC8800597951 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBC0426D1A25FC8800597951 /* SecondViewController.swift in Sources */,
+				CB5C772B1A2E0C9C007ACD7E /* PreTakeMovieViewController.swift in Sources */,
+				CB5C77281A2DA4E5007ACD7E /* MainTabViewController.swift in Sources */,
+				CB5C77241A2D68A5007ACD7E /* TakeMovieViewController.swift in Sources */,
+				CBB38B601A2F10B600610CB1 /* TakeMovieView.swift in Sources */,
+				CBC0426D1A25FC8800597951 /* AccountViewController.swift in Sources */,
+				CBD847521A354A31002A261A /* GenerateMovieFromImage.swift in Sources */,
+				CBD847551A359162002A261A /* GenerateMovieFromImage.m in Sources */,
 				CBC042691A25FC8800597951 /* AppDelegate.swift in Sources */,
-				CBC0426B1A25FC8800597951 /* FirstViewController.swift in Sources */,
+				CB1650821A31652700AB25DD /* EditMovieViewController.swift in Sources */,
+				CBC0426B1A25FC8800597951 /* HomeViewController.swift in Sources */,
+				CB1650801A3164E200AB25DD /* MoviePreviewView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +361,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -293,7 +378,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -318,7 +403,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -329,7 +414,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -340,9 +425,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = TryDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TryDemo/TryDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -350,9 +439,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = TryDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TryDemo/TryDemo-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -409,6 +501,7 @@
 				CBC042861A25FC8800597951 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CBC042871A25FC8800597951 /* Build configuration list for PBXNativeTarget "TryDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +510,7 @@
 				CBC042891A25FC8800597951 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
