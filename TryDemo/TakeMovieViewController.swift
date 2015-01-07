@@ -523,9 +523,9 @@ class TakeMovieViewController: UIViewController, AVCaptureFileOutputRecordingDel
             
             println("change camera")
             
-            self.cameraButton.enabled = false
+//            self.cameraButton.enabled = false
             self.recordButton.enabled = false
-            self.snapButton.enabled = false
+//            self.snapButton.enabled = false
             
             dispatch_async(self.sessionQueue, {
                 
@@ -574,8 +574,8 @@ class TakeMovieViewController: UIViewController, AVCaptureFileOutputRecordingDel
                 
                 dispatch_async(dispatch_get_main_queue(), {
                     self.recordButton.enabled = true
-                    self.snapButton.enabled = true
-                    self.cameraButton.enabled = true
+//                    self.snapButton.enabled = true
+//                    self.cameraButton.enabled = true
                 })
                 
             })

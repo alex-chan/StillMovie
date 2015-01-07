@@ -58,6 +58,24 @@ class EditMovieViewController: UIViewController{
 //        return true
 //    }
     
+    // MARK: actions
+    
+    @IBAction func previewMovie(sender: UIButton) {
+        println("preview btn clicked")
+        
+        println(self.player)
+        println(self.player!.status)
+        
+
+        if (self.player != nil && self.player!.status == AVPlayerStatus.ReadyToPlay){
+            
+            println("not ready to play")
+            self.player!.seekToTime(kCMTimeZero)
+            
+            self.player!.play()
+        }
+    }
+    
     
     typealias GenerateStillMovieCompletionBlok = (NSURL) -> Void
     
