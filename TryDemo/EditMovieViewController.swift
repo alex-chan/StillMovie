@@ -58,6 +58,7 @@ class EditMovieViewController: UIViewController{
 //        return true
 //    }
     
+    
     // MARK: actions
     
     @IBAction func previewMovie(sender: UIButton) {
