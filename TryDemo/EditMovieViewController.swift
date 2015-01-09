@@ -41,6 +41,11 @@ class EditMovieViewController: UIViewController{
     
     override func viewWillDisappear(animated: Bool) {
         self.playerItem!.removeObserver(self, forKeyPath: "status", context: &ItemStatusContext)
+        if let item = self.playerItem {
+              NSNotificationCenter.defaultCenter().removeObserver(self, name: AVPlayerItemDidPlayToEndTimeNotification, object:item)
+        }
+
+        
         super.viewWillDisappear(animated)
     }
     
@@ -57,7 +62,13 @@ class EditMovieViewController: UIViewController{
 //    override func prefersStatusBarHidden() -> Bool {
 //        return true
 //    }
-    
+    // MARK: selectors
+    func playerItemDidReachEnd(notification: NSNotification) {
+        
+        var p: AVPlayerItem = notification.object as AVPlayerItem
+        p.seekToTime(kCMTimeZero)
+
+    }
     
     // MARK: actions
     
@@ -103,7 +114,7 @@ class EditMovieViewController: UIViewController{
                 
                 asset.loadValuesAsynchronouslyForKeys([tracksKey], completionHandler: {
                     
-                    println("video tracks loaded, to load it")
+                    println("video tracks loading... ")
                     
                     dispatch_async(dispatch_get_main_queue(), {
                         
@@ -123,6 +134,9 @@ class EditMovieViewController: UIViewController{
                             
                             
                             self.playerView.player = self.player!
+                            self.player!.actionAtItemEnd = AVPlayerActionAtItemEnd.None
+                            
+                            NSNotificationCenter.defaultCenter().addObserver(self, selector: "playerItemDidReachEnd:", name: AVPlayerItemDidPlayToEndTimeNotification, object: self.playerItem)
                             
                             self.player!.play()
                             
