@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xqs-0u-GGp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6221" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="CfO-k4-vzz">
     <dependencies>
         <deployment version="2048" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -139,7 +140,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AN2-iq-3oV" userLabel="NavigationBar">
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AN2-iq-3oV" userLabel="NavigationBar">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <color key="backgroundColor" red="1" green="0.32810861690668158" blue="0.29247856810278894" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
@@ -159,7 +160,7 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rjh-pz-def" userLabel="TakeMovie" customClass="TakeMovieView" customModule="TryDemo" customModuleProvider="target">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rjh-pz-def" userLabel="TakeMovie" customClass="TakeMovieView" customModule="TryDemo" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="64" width="600" height="450"/>
                                 <subviews>
                                     <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Rl-EX-I1Y" userLabel="ChangeCamera">
@@ -170,9 +171,6 @@
                                                 <state key="normal" title="Camera">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
-                                                <variation key="heightClass=regular" misplaced="YES">
-                                                    <rect key="frame" x="272" y="7" width="66" height="30"/>
-                                                </variation>
                                                 <connections>
                                                     <action selector="changeCamera:" destination="xqs-0u-GGp" eventType="touchUpInside" id="GKy-zW-mFa"/>
                                                 </connections>
@@ -194,8 +192,7 @@
                                                 <exclude reference="vDE-zz-zpc"/>
                                             </mask>
                                         </variation>
-                                        <variation key="heightClass=regular" misplaced="YES">
-                                            <rect key="frame" x="-8" y="450" width="616" height="44"/>
+                                        <variation key="heightClass=regular">
                                             <mask key="subviews">
                                                 <include reference="ihC-KP-Hhc"/>
                                             </mask>
@@ -217,7 +214,7 @@
                                             </mask>
                                         </variation>
                                         <variation key="heightClass=regular" misplaced="YES">
-                                            <rect key="frame" x="0.0" y="498" width="600" height="4"/>
+                                            <rect key="frame" x="0.0" y="500" width="600" height="4"/>
                                             <mask key="constraints">
                                                 <include reference="eN3-MK-4mF"/>
                                             </mask>
@@ -242,14 +239,14 @@
                                         <exclude reference="1Te-yH-64G"/>
                                     </mask>
                                     <mask key="constraints">
-                                        <exclude reference="Kif-i3-q6P"/>
-                                        <exclude reference="LJG-H2-2IU"/>
                                         <exclude reference="02y-NX-nmf"/>
                                         <exclude reference="DAo-Bb-Y0r"/>
                                         <exclude reference="SVM-4B-ujZ"/>
                                         <exclude reference="k4Y-Vo-eBk"/>
                                         <exclude reference="vcP-y9-6fP"/>
                                         <exclude reference="zYk-x6-4Ms"/>
+                                        <exclude reference="Kif-i3-q6P"/>
+                                        <exclude reference="LJG-H2-2IU"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular">
@@ -258,14 +255,14 @@
                                         <include reference="1Te-yH-64G"/>
                                     </mask>
                                     <mask key="constraints">
-                                        <include reference="Kif-i3-q6P"/>
-                                        <include reference="LJG-H2-2IU"/>
                                         <include reference="02y-NX-nmf"/>
                                         <include reference="DAo-Bb-Y0r"/>
                                         <include reference="SVM-4B-ujZ"/>
                                         <include reference="k4Y-Vo-eBk"/>
                                         <include reference="vcP-y9-6fP"/>
                                         <include reference="zYk-x6-4Ms"/>
+                                        <include reference="Kif-i3-q6P"/>
+                                        <include reference="LJG-H2-2IU"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=compact-widthClass=regular">
@@ -274,10 +271,10 @@
                                     </mask>
                                 </variation>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="elc-yh-NJq" userLabel="Action">
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="elc-yh-NJq" userLabel="Action">
                                 <rect key="frame" x="0.0" y="514" width="600" height="37"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tHI-QN-giA">
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tHI-QN-giA">
                                         <rect key="frame" x="275" y="4" width="50" height="30"/>
                                         <state key="normal" title="Record">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -378,9 +375,6 @@
                                         <state key="normal" title="Preview">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <variation key="heightClass=regular" misplaced="YES">
-                                            <rect key="frame" x="259" y="127" width="61" height="31"/>
-                                        </variation>
                                         <connections>
                                             <action selector="previewMovie:" destination="CfO-k4-vzz" eventType="touchUpInside" id="Zu5-W8-JhS"/>
                                         </connections>

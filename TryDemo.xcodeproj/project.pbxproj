@@ -14,6 +14,8 @@
 		CB5C772B1A2E0C9C007ACD7E /* PreTakeMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5C772A1A2E0C9C007ACD7E /* PreTakeMovieViewController.swift */; };
 		CB63A5C31A3EEB9B0091B62B /* img1.JPG in Resources */ = {isa = PBXBuildFile; fileRef = CB63A5C21A3EEB9B0091B62B /* img1.JPG */; };
 		CB63A5C71A3EF0460091B62B /* img3.JPG in Resources */ = {isa = PBXBuildFile; fileRef = CB63A5C61A3EF0460091B62B /* img3.JPG */; };
+		CB78ED1B1A64262700CBAD45 /* main.mov in Resources */ = {isa = PBXBuildFile; fileRef = CB78ED191A64262700CBAD45 /* main.mov */; };
+		CB78ED1C1A64262700CBAD45 /* prefix.mov in Resources */ = {isa = PBXBuildFile; fileRef = CB78ED1A1A64262700CBAD45 /* prefix.mov */; };
 		CBB38B601A2F10B600610CB1 /* TakeMovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB38B5F1A2F10B600610CB1 /* TakeMovieView.swift */; };
 		CBC042691A25FC8800597951 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC042681A25FC8800597951 /* AppDelegate.swift */; };
 		CBC0426B1A25FC8800597951 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC0426A1A25FC8800597951 /* HomeViewController.swift */; };
@@ -44,6 +46,8 @@
 		CB5C772A1A2E0C9C007ACD7E /* PreTakeMovieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreTakeMovieViewController.swift; sourceTree = "<group>"; };
 		CB63A5C21A3EEB9B0091B62B /* img1.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img1.JPG; sourceTree = "<group>"; };
 		CB63A5C61A3EF0460091B62B /* img3.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = img3.JPG; sourceTree = "<group>"; };
+		CB78ED191A64262700CBAD45 /* main.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = main.mov; sourceTree = "<group>"; };
+		CB78ED1A1A64262700CBAD45 /* prefix.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = prefix.mov; sourceTree = "<group>"; };
 		CBB38B5F1A2F10B600610CB1 /* TakeMovieView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakeMovieView.swift; sourceTree = "<group>"; };
 		CBC042631A25FC8800597951 /* TryDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TryDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBC042671A25FC8800597951 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -139,6 +143,8 @@
 				CB1650831A3166C300AB25DD /* TakeMovie */,
 				CB16507E1A3164A200AB25DD /* EditMovie */,
 				CBC0426E1A25FC8800597951 /* Main.storyboard */,
+				CB78ED191A64262700CBAD45 /* main.mov */,
+				CB78ED1A1A64262700CBAD45 /* prefix.mov */,
 				CB63A5C21A3EEB9B0091B62B /* img1.JPG */,
 				CB63A5C61A3EF0460091B62B /* img3.JPG */,
 				CBC042711A25FC8800597951 /* Images.xcassets */,
@@ -257,7 +263,9 @@
 				CBC042701A25FC8800597951 /* Main.storyboard in Resources */,
 				CB63A5C31A3EEB9B0091B62B /* img1.JPG in Resources */,
 				CBC042751A25FC8800597951 /* LaunchScreen.xib in Resources */,
+				CB78ED1B1A64262700CBAD45 /* main.mov in Resources */,
 				CB63A5C71A3EF0460091B62B /* img3.JPG in Resources */,
+				CB78ED1C1A64262700CBAD45 /* prefix.mov in Resources */,
 				CBC042721A25FC8800597951 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
