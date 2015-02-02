@@ -142,6 +142,7 @@
 				CB1650841A3166E200AB25DD /* Home */,
 				CB1650831A3166C300AB25DD /* TakeMovie */,
 				CB16507E1A3164A200AB25DD /* EditMovie */,
+				CBF5368A1A7F8310002CED5E /* Effects */,
 				CBC0426E1A25FC8800597951 /* Main.storyboard */,
 				CB78ED191A64262700CBAD45 /* main.mov */,
 				CB78ED1A1A64262700CBAD45 /* prefix.mov */,
@@ -177,6 +178,13 @@
 				CBC0427F1A25FC8800597951 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CBF5368A1A7F8310002CED5E /* Effects */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Effects;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

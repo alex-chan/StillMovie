@@ -6,6 +6,23 @@
          contextName = "+[GenerateMovieFromImage newPixelBufferFromCGImage:]:GenerateMovieFromImage.m">
       </ContextState>
       <ContextState
+         contextName = "TryDemo.EditMovieViewController.observeValueForKeyPath (TryDemo.EditMovieViewController)(Swift.String, ofObject : Swift.AnyObject, change : Swift.Dictionary&lt;ObjectiveC.NSObject, Swift.AnyObject&gt;, context : Swift.UnsafeMutablePointer&lt;()&gt;) -&gt; ():EditMovieViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "change[NSKeyValueObservingOptions.Old]">
+            </PersistentString>
+            <PersistentString
+               value = "NSKeyValueObservingOptions.Old">
+            </PersistentString>
+            <PersistentString
+               value = "change">
+            </PersistentString>
+            <PersistentString
+               value = "item.status">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "+[GenerateMovieFromImage generateMovieWithImage:completionBlock:]:GenerateMovieFromImage.m">
          <PersistentStrings>
             <PersistentString

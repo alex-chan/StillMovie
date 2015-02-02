@@ -13,11 +13,30 @@ import UIKit
 import AssetsLibrary
 import MobileCoreServices
 
-var ItemStatusContext = "ItemStatusContext"
+var ItemStatusContext1 = "ItemStatusContext1"
+var ItemStatusContext2 = "ItemStatusContext2"
+var AVLoopPlayerCurrentItemObservationContext = "AVLoopPlayerCurrentItemObservationContext"
+
+enum MyAVPlayerItemType{
+    
+    case MAIN_ITEM
+    case PREFIX_ITEM
+}
+
+class MyAVPlayerItem: AVPlayerItem{
+
+    var TYPE: MyAVPlayerItemType = MyAVPlayerItemType.MAIN_ITEM
+    
+}
+
+
 
 class EditMovieViewController: UIViewController{
     
     var tmpMovieURL: NSURL?
+    
+    var itemReady1 = false
+    var itemReady2 = false
     
     
 //    
@@ -34,9 +53,37 @@ class EditMovieViewController: UIViewController{
         super.viewDidLoad()
         
         self.tmpMovieURL = NSBundle.mainBundle().URLForResource("main", withExtension: "mov")
+        
+        var prefixUrl:NSURL =  NSBundle.mainBundle().URLForResource("prefix", withExtension: "mov")!
+        var mainUrl:NSURL =  NSBundle.mainBundle().URLForResource("main", withExtension: "mov")!
+        
+        
+        self.itemReady1 = false
+        self.itemReady2 = false
+
 
         
-        self.process()
+        var item1 = MyAVPlayerItem(URL: prefixUrl)
+        item1.TYPE = MyAVPlayerItemType.PREFIX_ITEM
+        var item2 = MyAVPlayerItem(URL: mainUrl)
+        item2.TYPE = MyAVPlayerItemType.MAIN_ITEM
+
+
+        
+        self.queuePlayer = AVQueuePlayer(items: [item1, item2])
+        self.queuePlayer!.actionAtItemEnd = AVPlayerActionAtItemEnd.Advance
+        
+        self.queuePlayer!.addObserver(self, forKeyPath: "currentItem", options: NSKeyValueObservingOptions.Old, context: &AVLoopPlayerCurrentItemObservationContext)
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "playerItemDidReachEnd:", name: AVPlayerItemDidPlayToEndTimeNotification, object: item2)
+        
+        
+        self.playerView.player = self.queuePlayer!
+        self.queuePlayer!.play()
+        
+        
+        
+//        self.loadMovieItems(prefixUrl, movieUrl2: mainUrl)
         
     }
     
@@ -44,7 +91,8 @@ class EditMovieViewController: UIViewController{
     
     
     override func viewWillDisappear(animated: Bool) {
-        self.mainPlayerItem!.removeObserver(self, forKeyPath: "status", context: &ItemStatusContext)
+        self.prefixPlayerItem!.removeObserver(self, forKeyPath: "status", context: &ItemStatusContext1)
+        self.mainPlayerItem!.removeObserver(self, forKeyPath: "status", context: &ItemStatusContext2)
         if let item = self.mainPlayerItem {
               NSNotificationCenter.defaultCenter().removeObserver(self, name: AVPlayerItemDidPlayToEndTimeNotification, object:item)
         }
@@ -54,13 +102,54 @@ class EditMovieViewController: UIViewController{
     }
     
     override func observeValueForKeyPath(keyPath: String, ofObject object: AnyObject, change: [NSObject : AnyObject], context: UnsafeMutablePointer<Void>) {
-        if context == &ItemStatusContext {
+        if context == &ItemStatusContext1  {
+            
+            var item:AVPlayerItem = object as AVPlayerItem
+            if item.status == AVPlayerItemStatus.ReadyToPlay{
+                println("item 1 ready to play")
+                self.itemReady1 = true
+            }else{
+                println("item 1 NOT ready to play")
+            }
+
+
+        }else if context == &ItemStatusContext2{
+            var item:AVPlayerItem = object as AVPlayerItem
+            if item.status == AVPlayerItemStatus.ReadyToPlay{
+                println("item 2 ready to play")
+                self.itemReady2 = true
+            }else{
+                println("item 2 NOT ready to play")
+            }
+
+        }else if context == &AVLoopPlayerCurrentItemObservationContext{
+            println("currentItem changed")
+            var player:AVQueuePlayer = object as AVQueuePlayer
+            var itemRemoved = change[NSKeyValueChangeOldKey] as MyAVPlayerItem
+            if itemRemoved.isKindOfClass(MyAVPlayerItem){
+                println("seek to time zeror")
+                itemRemoved.seekToTime(kCMTimeZero)
+                player.insertItem(itemRemoved, afterItem: nil)
+                
+
+                
+            }
+
             
             
             
         }else{
             return super.observeValueForKeyPath(keyPath, ofObject: object , change: change, context: context)
         }
+        
+//        if self.itemReady1 {
+//            dispatch_async(dispatch_get_main_queue(), {
+//                
+//                self.playMovies()
+//                
+//            })
+//        }
+        
     }
     
 //    override func prefersStatusBarHidden() -> Bool {
@@ -71,11 +160,11 @@ class EditMovieViewController: UIViewController{
         
         
         println("playerItemDidReachEnd \(self.queuePlayer!.items()) ")
-        println("items:\(self.queuePlayer!.items() ) ")
         
-        self.queuePlayer!.items()[0].seekToTime(kCMTimeZero)
+//        self.queuePlayer!.items()[0].seekToTime(kCMTimeZero)
 //        var p: AVPlayerItem = notification.object as AVPlayerItem
 //        p.seekToTime(kCMTimeZero)
+//        self.playMovies()
 
     }
     
@@ -98,141 +187,111 @@ class EditMovieViewController: UIViewController{
     typealias GenerateStillMovieCompletionBlok = (NSURL) -> Void
     
     // MARK: Image generate related functions
-    func process(){
-        
+    
+    
+    func doJob(movieURL :NSURL){
 
         println("to generate still movie")
         
-        self.generateStillMovie(self.tmpMovieURL!, completionBlock:{
+        self.generateStillMovie(movieURL, completionBlock:{
             generatedTmpMovieURL in
-            
-            println("stillmovie generated, play them")
-            
-            
-            var asset1: AVURLAsset = AVURLAsset(URL: generatedTmpMovieURL, options: nil)
-            var tracksKey = "tracks"
-            asset1.loadValuesAsynchronouslyForKeys([tracksKey], completionHandler: {
-                
-                    var error: NSError? = nil
-                    var status: AVKeyValueStatus = asset1.statusOfValueForKey(tracksKey, error: &error)
-                    
-                    if status == AVKeyValueStatus.Loaded{
-                        self.prefixPlayerItem = AVPlayerItem(asset: asset1)
-                        println("asset1 loaded")
-                        if self.mainPlayerItem != nil{
-                            println("all loaded1")
-                            self.playMovies();
-                        }
-                        
-                    }else{
-                        println(error)
-                    }
-                    
-            })
-                
-       
-        
-            var asset2: AVURLAsset = AVURLAsset(URL: self.tmpMovieURL!, options: nil)
-
-            asset2.loadValuesAsynchronouslyForKeys([tracksKey], completionHandler: {
-                
-                var error: NSError? = nil
-                var status: AVKeyValueStatus = asset2.statusOfValueForKey(tracksKey, error: &error)
-                
-                if status == AVKeyValueStatus.Loaded{
-                    self.mainPlayerItem = AVPlayerItem(asset: asset2)
-                    self.mainPlayerItem!.addObserver(self, forKeyPath: "status", options: NSKeyValueObservingOptions.Initial, context: &ItemStatusContext)
-                    
-                    NSNotificationCenter.defaultCenter().addObserver(self, selector: "playerItemDidReachEnd:", name: AVPlayerItemDidPlayToEndTimeNotification, object: self.mainPlayerItem)
-                    println("asset2 loaded")
-                    if self.prefixPlayerItem != nil{
-                        println("all loaded2")
-                        self.playMovies()
-                    }
-                    
-                }else{
-                    println(error)
-                }
-                
-            })
-        
-  
-    
-    
-//            self.concatVideo(generatedTmpMovieURL, with: self.tmpMovieURL!, completionBlock: {
-//    
-//                url in
-//                
-//                println("videos concated, to load tracks")
-//                
-//                var asset: AVURLAsset = AVURLAsset(URL: url, options: nil)
-//                
-//                var tracksKey = "tracks"
-//                
-//                asset.loadValuesAsynchronouslyForKeys([tracksKey], completionHandler: {
-//                    
-//                    println("video tracks loading... ")
-//                    
-//                    dispatch_async(dispatch_get_main_queue(), {
-//                        
-//                        
-//                        
-//                        var error: NSError? = nil
-//                        var status: AVKeyValueStatus = asset.statusOfValueForKey(tracksKey, error: &error)
-//                        
-//                        if status == AVKeyValueStatus.Loaded{
-//                            
-//                            println("video loaded, to play it")
-//                            
-//                            self.playerItem = AVPlayerItem(asset: asset)
-//                            self.playerItem!.addObserver(self, forKeyPath: "status", options: NSKeyValueObservingOptions.Initial, context: &ItemStatusContext)
-//                            
-//                            self.player = AVPlayer(playerItem: self.playerItem)
-//                            
-//                            
-//                            self.playerView.player = self.player!
-//                            self.player!.actionAtItemEnd = AVPlayerActionAtItemEnd.None
-//                            
-//                            NSNotificationCenter.defaultCenter().addObserver(self, selector: "playerItemDidReachEnd:", name: AVPlayerItemDidPlayToEndTimeNotification, object: self.playerItem)
-//                            
-//                            self.player!.play()
-//                            
-//                        }else{
-//                            println(error)
-//                        }
-//                        
-//                    })
-//                    
-//                    
-//                })
-//                
-//                
-//            })
-
-            
             
             
         })
     }
     
+    func loadMovieItems(movieUrl1: NSURL, movieUrl2: NSURL){
+
+        
+        var asset1: AVURLAsset = AVURLAsset(URL: movieUrl1, options: nil)
+        var tracksKey = "tracks"
+        asset1.loadValuesAsynchronouslyForKeys([tracksKey], completionHandler: {
+            
+            var error: NSError? = nil
+            var status: AVKeyValueStatus = asset1.statusOfValueForKey(tracksKey, error: &error)
+            
+            if status == AVKeyValueStatus.Loaded{
+                println("asset1 tracks loaded")
+
+                
+                self.prefixPlayerItem = AVPlayerItem(asset: asset1)
+                
+                self.prefixPlayerItem!.addObserver(self, forKeyPath: "status", options: NSKeyValueObservingOptions.Initial, context: &ItemStatusContext1)
+                
+                if  self.mainPlayerItem != nil{
+                    println("to construct queue play from asset 1")
+                    dispatch_async(dispatch_get_main_queue(), {
+                        self.constructQueyPlayer(self.prefixPlayerItem!, item2: self.mainPlayerItem!)
+                    })
+                }
+                
+                
+            }else{
+                println(error)
+            }
+                
+            
+            
+        })
+        
+        
+        
+        var asset2: AVURLAsset = AVURLAsset(URL: movieUrl2, options: nil)
+        
+        asset2.loadValuesAsynchronouslyForKeys([tracksKey], completionHandler: {
+            
+            var error: NSError? = nil
+            var status: AVKeyValueStatus = asset2.statusOfValueForKey(tracksKey, error: &error)
+            
+            if status == AVKeyValueStatus.Loaded{
+                
+                
+                self.mainPlayerItem = AVPlayerItem(asset: asset2)
+                println("asset2 tracks loaded")
+                
+                self.mainPlayerItem!.addObserver(self, forKeyPath: "status", options: NSKeyValueObservingOptions.Initial, context: &ItemStatusContext2)
+                
+                NSNotificationCenter.defaultCenter().addObserver(self, selector: "playerItemDidReachEnd:", name: AVPlayerItemDidPlayToEndTimeNotification, object: self.mainPlayerItem)
+                
+                if self.prefixPlayerItem != nil{
+                    println("to construct queue play from asset 2")
+                    dispatch_async(dispatch_get_main_queue(), {
+                        self.constructQueyPlayer(self.prefixPlayerItem!, item2: self.mainPlayerItem!)
+                    })
+                }
+                
+                
+                
+            }else{
+                println(error)
+            }
+            
+        })
+        
+        
+    }
+    
     func playMovies(){
         
-        
-        println("playMovies:\(self.prefixPlayerItem!), \(self.mainPlayerItem!)")
-
-
-//        self.queuePlayer = AVQueuePlayer( items: [self.prefixPlayerItem!, self.mainPlayerItem! ])
-
-        self.queuePlayer = AVQueuePlayer.queuePlayerWithItems( [self.prefixPlayerItem!, self.mainPlayerItem! ]) as AVQueuePlayer
-        
-        
-        self.playerView.player =  self.queuePlayer!
-        
-        self.queuePlayer!.actionAtItemEnd = AVPlayerActionAtItemEnd.Advance
-        
-        println("items:\(self.queuePlayer!.items() ) ")
-        
         self.queuePlayer!.play()
+    }
+    
+    
+    func constructQueyPlayer(item1: AVPlayerItem, item2: AVPlayerItem){
+        if self.queuePlayer == nil{
+ 
+            
+            self.queuePlayer = AVQueuePlayer( items: [item1, item2])
+            
+            self.playerView.player =  self.queuePlayer!
+            
+            self.queuePlayer!.actionAtItemEnd = AVPlayerActionAtItemEnd.Advance
+            
+            println("items ready to play :\(self.queuePlayer!.items() ) ")
+        }
+        
+
+
         
     }
 
