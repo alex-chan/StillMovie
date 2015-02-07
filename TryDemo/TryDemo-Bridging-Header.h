@@ -3,3 +3,7 @@
 //
 
 #import "GenerateMovieFromImage.h"
+
+#import <ShareSDK/ShareSDK.h>
+#import "WXApi.h"
+#import <RennSDK/RennSDK.h>

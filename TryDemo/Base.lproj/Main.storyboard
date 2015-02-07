@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6221" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="CfO-k4-vzz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="CfO-k4-vzz">
     <dependencies>
         <deployment version="2048" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6213"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -320,7 +320,6 @@
                     <connections>
                         <outlet property="previewView" destination="Rjh-pz-def" id="QeG-o0-7fQ"/>
                         <outlet property="recordButton" destination="tHI-QN-giA" id="iea-wk-Dn4"/>
-                        <segue destination="CfO-k4-vzz" kind="custom" identifier="toEditMovieSegue" id="XnB-BC-JGM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FLf-fa-6nd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -347,7 +346,7 @@
                                     <navigationItem id="zUQ-Kp-c0M">
                                         <nil key="title"/>
                                         <barButtonItem key="leftBarButtonItem" style="plain" id="A2g-fn-vTy">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nmc-5W-k0r" userLabel="Exit">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nmc-5W-k0r">
                                                 <rect key="frame" x="16" y="7" width="60" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Retake">
@@ -358,15 +357,22 @@
                                                 </connections>
                                             </button>
                                         </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" style="plain" id="zWx-eD-mFU">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Sj0-1H-hHL">
+                                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Finish">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="finishEditing:" destination="CfO-k4-vzz" eventType="touchUpInside" id="Fux-iq-vvV"/>
+                                                    <segue destination="MG3-Yd-ttf" kind="show" id="RmF-mv-NcY"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="28l-oi-2MX" userLabel="MoviePreviewView" customClass="MoviePreviewView" customModule="TryDemo" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="64" width="600" height="450"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="28l-oi-2MX" secondAttribute="height" multiplier="4:3" id="VuP-Uc-edk"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1zh-AC-8Fa" userLabel="PreviewAction">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
@@ -403,6 +409,12 @@
                                         <include reference="eLp-Tm-oNm"/>
                                     </mask>
                                 </variation>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="28l-oi-2MX" userLabel="MoviePreviewView" customClass="MoviePreviewView" customModule="TryDemo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="600" height="450"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="28l-oi-2MX" secondAttribute="height" multiplier="4:3" id="VuP-Uc-edk"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -456,23 +468,140 @@
             </objects>
             <point key="canvasLocation" x="-487" y="-230.25"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="b4Y-wo-YLa">
+        <!--ShareMovie-->
+        <scene sceneID="I5p-rQ-65i">
             <objects>
-                <viewController id="dj8-nr-ZPG" sceneMemberID="viewController">
+                <viewController id="MG3-Yd-ttf" userLabel="ShareMovie" customClass="ShareMovieViewController" customModule="TryDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="veF-1A-4vH"/>
-                        <viewControllerLayoutGuide type="bottom" id="Usx-k2-0Qr"/>
+                        <viewControllerLayoutGuide type="top" id="GyV-Rk-1SE"/>
+                        <viewControllerLayoutGuide type="bottom" id="suH-cq-On5"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="JdP-hf-5oT">
+                    <view key="view" contentMode="scaleToFill" id="8Ed-vr-t8I" userLabel="Root">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m6i-lR-p3M">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <items>
+                                    <navigationItem id="mZp-A4-bw4">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="i9g-HD-kqU">
+                                            <connections>
+                                                <segue destination="Uol-Te-rzh" kind="unwind" unwindAction="unwindToEditMovie:" id="J7x-o6-2iG"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KxK-Ud-8rR">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="132" id="aNJ-D5-hjc">
+                                        <variation key="heightClass=regular" constant="100"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="100" id="nOl-ec-Eg0"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="aNJ-D5-hjc"/>
+                                        <exclude reference="nOl-ec-Eg0"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="aNJ-D5-hjc"/>
+                                        <include reference="nOl-ec-Eg0"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CUS-fB-8tJ" customClass="BorderTextView" customModule="TryDemo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="BSG-YC-MDu">
+                                        <variation key="heightClass=regular" constant="88"/>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" cocoaTouchSystemColor="darkTextColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeHolder" value="Say something to others"/>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="BSG-YC-MDu"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="BSG-YC-MDu"/>
+                                    </mask>
+                                </variation>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CUS-fB-8tJ" firstAttribute="leading" secondItem="8Ed-vr-t8I" secondAttribute="leadingMargin" constant="20" id="1oQ-0a-xOc"/>
+                            <constraint firstItem="KxK-Ud-8rR" firstAttribute="top" secondItem="m6i-lR-p3M" secondAttribute="bottom" constant="77" id="CMF-OS-fIh">
+                                <variation key="heightClass=regular" constant="10"/>
+                            </constraint>
+                            <constraint firstItem="m6i-lR-p3M" firstAttribute="leading" secondItem="8Ed-vr-t8I" secondAttribute="leading" id="KOm-Ev-wox"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CUS-fB-8tJ" secondAttribute="trailing" constant="20" id="Qa8-O7-Qsr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="m6i-lR-p3M" secondAttribute="trailing" id="T6X-fo-0zI"/>
+                            <constraint firstAttribute="centerX" secondItem="KxK-Ud-8rR" secondAttribute="centerX" id="TAf-WN-Ag3"/>
+                            <constraint firstItem="CUS-fB-8tJ" firstAttribute="top" secondItem="KxK-Ud-8rR" secondAttribute="bottom" constant="20" id="go1-J4-Srd">
+                                <variation key="heightClass=regular" constant="52"/>
+                            </constraint>
+                            <constraint firstItem="m6i-lR-p3M" firstAttribute="top" secondItem="GyV-Rk-1SE" secondAttribute="bottom" id="rcA-kP-V0Y"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="m6i-lR-p3M"/>
+                                <exclude reference="KxK-Ud-8rR"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="KOm-Ev-wox"/>
+                                <exclude reference="T6X-fo-0zI"/>
+                                <exclude reference="rcA-kP-V0Y"/>
+                                <exclude reference="CMF-OS-fIh"/>
+                                <exclude reference="TAf-WN-Ag3"/>
+                                <exclude reference="1oQ-0a-xOc"/>
+                                <exclude reference="Qa8-O7-Qsr"/>
+                                <exclude reference="go1-J4-Srd"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="subviews">
+                                <include reference="m6i-lR-p3M"/>
+                                <include reference="KxK-Ud-8rR"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="KOm-Ev-wox"/>
+                                <include reference="T6X-fo-0zI"/>
+                                <include reference="rcA-kP-V0Y"/>
+                                <include reference="CMF-OS-fIh"/>
+                                <include reference="TAf-WN-Ag3"/>
+                                <include reference="1oQ-0a-xOc"/>
+                                <include reference="Qa8-O7-Qsr"/>
+                                <include reference="go1-J4-Srd"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="idG-Sa-wtl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gPY-bD-Ysa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Uol-Te-rzh" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="329" y="237"/>
+            <point key="canvasLocation" x="172" y="-230.25"/>
         </scene>
     </scenes>
     <resources>
