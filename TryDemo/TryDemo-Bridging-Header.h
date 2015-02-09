@@ -6,4 +6,4 @@
 
 #import <ShareSDK/ShareSDK.h>
 #import "WXApi.h"
-#import <RennSDK/RennSDK.h>
+#import "WeiboSDK.h"

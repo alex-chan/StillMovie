@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="CfO-k4-vzz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="MG3-Yd-ttf">
     <dependencies>
         <deployment version="2048" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
@@ -513,59 +513,33 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CUS-fB-8tJ" customClass="BorderTextView" customModule="TryDemo" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="88" id="BSG-YC-MDu">
-                                        <variation key="heightClass=regular" constant="88"/>
-                                    </constraint>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" cocoaTouchSystemColor="darkTextColor"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="5"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="placeHolder" value="Say something to others"/>
-                                </userDefinedRuntimeAttributes>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="BSG-YC-MDu"/>
-                                    </mask>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a9p-rA-73C">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Share"/>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                                    <rect key="frame" x="269" y="362" width="46" height="30"/>
                                 </variation>
-                                <variation key="heightClass=regular">
-                                    <mask key="constraints">
-                                        <include reference="BSG-YC-MDu"/>
-                                    </mask>
-                                </variation>
-                            </textView>
+                                <connections>
+                                    <action selector="share:" destination="MG3-Yd-ttf" eventType="touchUpInside" id="3ss-g4-CvV"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="CUS-fB-8tJ" firstAttribute="leading" secondItem="8Ed-vr-t8I" secondAttribute="leadingMargin" constant="20" id="1oQ-0a-xOc"/>
                             <constraint firstItem="KxK-Ud-8rR" firstAttribute="top" secondItem="m6i-lR-p3M" secondAttribute="bottom" constant="77" id="CMF-OS-fIh">
                                 <variation key="heightClass=regular" constant="10"/>
                             </constraint>
                             <constraint firstItem="m6i-lR-p3M" firstAttribute="leading" secondItem="8Ed-vr-t8I" secondAttribute="leading" id="KOm-Ev-wox"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="CUS-fB-8tJ" secondAttribute="trailing" constant="20" id="Qa8-O7-Qsr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="m6i-lR-p3M" secondAttribute="trailing" id="T6X-fo-0zI"/>
                             <constraint firstAttribute="centerX" secondItem="KxK-Ud-8rR" secondAttribute="centerX" id="TAf-WN-Ag3"/>
-                            <constraint firstItem="CUS-fB-8tJ" firstAttribute="top" secondItem="KxK-Ud-8rR" secondAttribute="bottom" constant="20" id="go1-J4-Srd">
-                                <variation key="heightClass=regular" constant="52"/>
-                            </constraint>
                             <constraint firstItem="m6i-lR-p3M" firstAttribute="top" secondItem="GyV-Rk-1SE" secondAttribute="bottom" id="rcA-kP-V0Y"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="m6i-lR-p3M"/>
                                 <exclude reference="KxK-Ud-8rR"/>
+                                <exclude reference="a9p-rA-73C"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="KOm-Ev-wox"/>
@@ -573,15 +547,13 @@
                                 <exclude reference="rcA-kP-V0Y"/>
                                 <exclude reference="CMF-OS-fIh"/>
                                 <exclude reference="TAf-WN-Ag3"/>
-                                <exclude reference="1oQ-0a-xOc"/>
-                                <exclude reference="Qa8-O7-Qsr"/>
-                                <exclude reference="go1-J4-Srd"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular">
                             <mask key="subviews">
                                 <include reference="m6i-lR-p3M"/>
                                 <include reference="KxK-Ud-8rR"/>
+                                <include reference="a9p-rA-73C"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="KOm-Ev-wox"/>
@@ -589,9 +561,6 @@
                                 <include reference="rcA-kP-V0Y"/>
                                 <include reference="CMF-OS-fIh"/>
                                 <include reference="TAf-WN-Ag3"/>
-                                <include reference="1oQ-0a-xOc"/>
-                                <include reference="Qa8-O7-Qsr"/>
-                                <include reference="go1-J4-Srd"/>
                             </mask>
                         </variation>
                     </view>
