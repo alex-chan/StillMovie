@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         ShareSDK.registerApp("5b09c977b07c")
         
-        ShareSDK.connectSinaWeiboWithAppKey("568898243", appSecret: "38a4f8204cc784f81f9f0daaf31e02e3", redirectUri: "http://www.sharesdk.cn", weiboSDKCls: WeiboSDK.self)
+        ShareSDK.connectSinaWeiboWithAppKey("1646769844", appSecret: "057deedfe77f7bea1a7c19f345e3318e", redirectUri: "http://icammov.geek-link.com", weiboSDKCls: WeiboSDK.self)
         
         return true
     }
@@ -45,6 +45,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    func application(application: UIApplication, handleOpenURL url: NSURL) -> Bool {
+        return ShareSDK.handleOpenURL(url, wxDelegate: self)
+    }
+    
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {
+        return ShareSDK.handleOpenURL(url, sourceApplication: sourceApplication,
+            annotation: annotation, wxDelegate: self)
     }
 
 

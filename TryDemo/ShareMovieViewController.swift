@@ -21,7 +21,7 @@ class ShareMovieViewController : UIViewController{
         //        var container: ISSContainer = ShareSDK.container()
         //        container.setIPadContainerWithView(sender, arrowDirect: UIPopoverArrowDirection.Up)
         
-        var publishContent : ISSContent = ShareSDK.content("分享文字", defaultContent:"默认分享内容，没内容时显示",image:nil, title:"提示",url:"http://www.sharesdk.com",description:"这是一条测试信息",mediaType:SSPublishContentMediaTypeNews)
+        var publishContent : ISSContent = ShareSDK.content("分享文字", defaultContent:"默认分享内容，没内容时显示",image:nil, title:"提示",url:"http://icammov.geek-link.com",description:"这是一条测试信息",mediaType:SSPublishContentMediaTypeNews)
 
         
            ShareSDK.showShareActionSheet(nil,
