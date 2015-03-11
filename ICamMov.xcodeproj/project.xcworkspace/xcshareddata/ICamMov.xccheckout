@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>426F0BF2-600E-44E5-BC45-7BEE0C889E2A</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ICamMov</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E53DC341597A84D09D2E267F2E59B9C41DB2C121</key>
+		<string>https://github.com/alex-chan/StillMovie.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ICamMov.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E53DC341597A84D09D2E267F2E59B9C41DB2C121</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/alex-chan/StillMovie.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E53DC341597A84D09D2E267F2E59B9C41DB2C121</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E53DC341597A84D09D2E267F2E59B9C41DB2C121</string>
+			<key>IDESourceControlWCCName</key>
+			<string>TryDemo</string>
+		</dict>
+	</array>
+</dict>
+</plist>

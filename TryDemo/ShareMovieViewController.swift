@@ -13,7 +13,59 @@ import UIKit
 class ShareMovieViewController : UIViewController{
     
     
+    
+    func uploadMovie(){
+        var mainURL:NSURL =  NSBundle.mainBundle().URLForResource("main", withExtension: "mov")!
+        var videoData = NSData(contentsOfURL: mainURL)
+        
+        var videoFile = PFFile(name:"test.mp4", data: videoData)
+        
+
+        
+        videoFile.saveInBackgroundWithBlock({
+            (succeed: Bool!, error: NSError!) in
+            if succeed! {
+                
+                
+                
+                var video = PFObject(className: "Video")
+                video["owner"] = PFUser.currentUser()
+                video["videoFile"] = videoFile
+                video.saveInBackgroundWithBlock(nil)
+                
+            }
+        }, progressBlock: {
+            (percentDone: Int32) in
+            //
+            println(percentDone)
+                
+        })
+        
+
+        
+        
+    }
+    
     @IBAction func share(sender: UIButton) {
+        
+//        self.uploadMovie()
+        
+        println(PFUser.currentUser())
+//        ShareSDK.hasAuthorizedWithType(ShareTypeSinaWeibo)
+        if PFUser.currentUser() == nil {
+            var loginView = self.storyboard!.instantiateViewControllerWithIdentifier("sid_vc_login") as LoginViewController
+            
+//            self.navigationController!.pushViewController(loginView, animated: true)
+            
+            self.presentViewController(loginView, animated: true, completion:nil)
+            
+        }else{
+            println("current user exists")
+            self.uploadMovie()
+        }
+        
+        return
+        
         var imagePath = NSBundle.mainBundle().pathForResource("img1", ofType: "jpg")
         
         
@@ -23,6 +75,7 @@ class ShareMovieViewController : UIViewController{
         
         var publishContent : ISSContent = ShareSDK.content("分享文字", defaultContent:"默认分享内容，没内容时显示",image:nil, title:"提示",url:"http://icammov.geek-link.com",description:"这是一条测试信息",mediaType:SSPublishContentMediaTypeNews)
 
+//        var shareList  = ShareSDK.getShareListWithType(ShareTypeSinaWeibo, ShareTypeWeixiSession,ShareTypeWeixiTimeline )
         
            ShareSDK.showShareActionSheet(nil,
                                 shareList: nil,

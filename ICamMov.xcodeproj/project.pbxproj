@@ -16,6 +16,9 @@
 		CB1CF7E51A84EE6200CCF560 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CB1CF7E41A84EE6200CCF560 /* libicucore.dylib */; };
 		CB1CF7E91A84EE7A00CCF560 /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CB1CF7E81A84EE7A00CCF560 /* libz.1.2.5.dylib */; };
 		CB1CF7EB1A84EE8300CCF560 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB1CF7EA1A84EE8300CCF560 /* Security.framework */; };
+		CB2645911AA9CD040062073A /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB2645901AA9CD040062073A /* Social.framework */; };
+		CB2645931AA9CD120062073A /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB2645921AA9CD120062073A /* Accounts.framework */; };
+		CB2645951AA9D66E0062073A /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB2645941AA9D66E0062073A /* Bolts.framework */; };
 		CB5C77241A2D68A5007ACD7E /* TakeMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5C77231A2D68A5007ACD7E /* TakeMovieViewController.swift */; };
 		CB5C77281A2DA4E5007ACD7E /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5C77271A2DA4E5007ACD7E /* MainTabViewController.swift */; };
 		CB5C772B1A2E0C9C007ACD7E /* PreTakeMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB5C772A1A2E0C9C007ACD7E /* PreTakeMovieViewController.swift */; };
@@ -34,6 +37,14 @@
 		CBC042721A25FC8800597951 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CBC042711A25FC8800597951 /* Images.xcassets */; };
 		CBC042751A25FC8800597951 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBC042731A25FC8800597951 /* LaunchScreen.xib */; };
 		CBC042811A25FC8800597951 /* TryDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC042801A25FC8800597951 /* TryDemoTests.swift */; };
+		CBC49ABC1AA9C5CB00701E86 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBC49ABB1AA9C5CB00701E86 /* Parse.framework */; };
+		CBC49ABE1AA9C66200701E86 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBC49ABD1AA9C66200701E86 /* StoreKit.framework */; };
+		CBC49AC01AA9C68100701E86 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBC49ABF1AA9C68100701E86 /* MobileCoreServices.framework */; };
+		CBC49AC21AA9C7D900701E86 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBC49AC11AA9C7D900701E86 /* AudioToolbox.framework */; };
+		CBC49AC41AA9C7E100701E86 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBC49AC31AA9C7E100701E86 /* CFNetwork.framework */; };
+		CBC49AC61AA9C7EA00701E86 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBC49AC51AA9C7EA00701E86 /* CoreGraphics.framework */; };
+		CBC49AC81AA9C7F400701E86 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBC49AC71AA9C7F400701E86 /* CoreLocation.framework */; };
+		CBC49ACC1AA9C83600701E86 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CBC49ACB1AA9C83600701E86 /* libsqlite3.dylib */; };
 		CBC9C9531A889FB400FAAE6D /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBC9C9521A889FB400FAAE6D /* ImageIO.framework */; };
 		CBC9CA0B1A88A4B900FAAE6D /* FacebookConnection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBC9C9EF1A88A4B900FAAE6D /* FacebookConnection.framework */; };
 		CBC9CA0C1A88A4B900FAAE6D /* SinaWeiboConnection.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBC9C9F01A88A4B900FAAE6D /* SinaWeiboConnection.framework */; };
@@ -53,6 +64,7 @@
 		CBC9CA1A1A88A4B900FAAE6D /* ShareSDKiPhoneDefaultShareViewUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBC9CA081A88A4B900FAAE6D /* ShareSDKiPhoneDefaultShareViewUI.framework */; };
 		CBC9CA1B1A88A4B900FAAE6D /* ShareSDKiPhoneSimpleShareViewUI.bundle in Resources */ = {isa = PBXBuildFile; fileRef = CBC9CA091A88A4B900FAAE6D /* ShareSDKiPhoneSimpleShareViewUI.bundle */; };
 		CBC9CA1C1A88A4B900FAAE6D /* ShareSDKiPhoneSimpleShareViewUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBC9CA0A1A88A4B900FAAE6D /* ShareSDKiPhoneSimpleShareViewUI.framework */; };
+		CBD07A401AAAFCD600963F4A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD07A3F1AAAFCD600963F4A /* LoginViewController.swift */; };
 		CBD847521A354A31002A261A /* GenerateMovieFromImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBD847511A354A31002A261A /* GenerateMovieFromImage.swift */; };
 		CBD847551A359162002A261A /* GenerateMovieFromImage.m in Sources */ = {isa = PBXBuildFile; fileRef = CBD847541A359162002A261A /* GenerateMovieFromImage.m */; };
 /* End PBXBuildFile section */
@@ -77,6 +89,9 @@
 		CB1CF7E41A84EE6200CCF560 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		CB1CF7E81A84EE7A00CCF560 /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
 		CB1CF7EA1A84EE8300CCF560 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		CB2645901AA9CD040062073A /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		CB2645921AA9CD120062073A /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		CB2645941AA9D66E0062073A /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		CB5C77231A2D68A5007ACD7E /* TakeMovieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakeMovieViewController.swift; sourceTree = "<group>"; };
 		CB5C77271A2DA4E5007ACD7E /* MainTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
 		CB5C772A1A2E0C9C007ACD7E /* PreTakeMovieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreTakeMovieViewController.swift; sourceTree = "<group>"; };
@@ -88,7 +103,7 @@
 		CB78ED1A1A64262700CBAD45 /* prefix.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = prefix.mov; sourceTree = "<group>"; };
 		CB95D6C21A820308000F3BD5 /* ShareMovieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareMovieViewController.swift; sourceTree = "<group>"; };
 		CBB38B5F1A2F10B600610CB1 /* TakeMovieView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TakeMovieView.swift; sourceTree = "<group>"; };
-		CBC042631A25FC8800597951 /* TryDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TryDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBC042631A25FC8800597951 /* MagicCam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicCam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBC042671A25FC8800597951 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBC042681A25FC8800597951 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CBC0426A1A25FC8800597951 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -96,9 +111,17 @@
 		CBC0426F1A25FC8800597951 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CBC042711A25FC8800597951 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CBC042741A25FC8800597951 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		CBC0427A1A25FC8800597951 /* TryDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TryDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBC0427A1A25FC8800597951 /* ICamMovTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ICamMovTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBC0427F1A25FC8800597951 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBC042801A25FC8800597951 /* TryDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TryDemoTests.swift; sourceTree = "<group>"; };
+		CBC49ABB1AA9C5CB00701E86 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		CBC49ABD1AA9C66200701E86 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		CBC49ABF1AA9C68100701E86 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		CBC49AC11AA9C7D900701E86 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		CBC49AC31AA9C7E100701E86 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		CBC49AC51AA9C7EA00701E86 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		CBC49AC71AA9C7F400701E86 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		CBC49ACB1AA9C83600701E86 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		CBC9C9521A889FB400FAAE6D /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		CBC9C9EF1A88A4B900FAAE6D /* FacebookConnection.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookConnection.framework; sourceTree = "<group>"; };
 		CBC9C9F01A88A4B900FAAE6D /* SinaWeiboConnection.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SinaWeiboConnection.framework; sourceTree = "<group>"; };
@@ -122,6 +145,7 @@
 		CBC9CA081A88A4B900FAAE6D /* ShareSDKiPhoneDefaultShareViewUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDKiPhoneDefaultShareViewUI.framework; sourceTree = "<group>"; };
 		CBC9CA091A88A4B900FAAE6D /* ShareSDKiPhoneSimpleShareViewUI.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ShareSDKiPhoneSimpleShareViewUI.bundle; sourceTree = "<group>"; };
 		CBC9CA0A1A88A4B900FAAE6D /* ShareSDKiPhoneSimpleShareViewUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ShareSDKiPhoneSimpleShareViewUI.framework; sourceTree = "<group>"; };
+		CBD07A3F1AAAFCD600963F4A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		CBD847511A354A31002A261A /* GenerateMovieFromImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerateMovieFromImage.swift; sourceTree = "<group>"; };
 		CBD847531A359162002A261A /* TryDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TryDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		CBD847541A359162002A261A /* GenerateMovieFromImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GenerateMovieFromImage.m; sourceTree = "<group>"; };
@@ -133,11 +157,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB2645931AA9CD120062073A /* Accounts.framework in Frameworks */,
+				CB2645911AA9CD040062073A /* Social.framework in Frameworks */,
+				CBC49ACC1AA9C83600701E86 /* libsqlite3.dylib in Frameworks */,
+				CB1CF7DF1A84EE3D00CCF560 /* SystemConfiguration.framework in Frameworks */,
+				CBC49AC81AA9C7F400701E86 /* CoreLocation.framework in Frameworks */,
+				CBC49AC61AA9C7EA00701E86 /* CoreGraphics.framework in Frameworks */,
+				CBC49AC41AA9C7E100701E86 /* CFNetwork.framework in Frameworks */,
+				CBC49AC21AA9C7D900701E86 /* AudioToolbox.framework in Frameworks */,
+				CBC49AC01AA9C68100701E86 /* MobileCoreServices.framework in Frameworks */,
+				CB1CF7EB1A84EE8300CCF560 /* Security.framework in Frameworks */,
+				CBC49ABE1AA9C66200701E86 /* StoreKit.framework in Frameworks */,
 				CBC9CA141A88A4B900FAAE6D /* libWeChatSDK.a in Frameworks */,
 				CBC9CA0D1A88A4B900FAAE6D /* WeChatConnection.framework in Frameworks */,
 				CBC9C9531A889FB400FAAE6D /* ImageIO.framework in Frameworks */,
-				CB1CF7EB1A84EE8300CCF560 /* Security.framework in Frameworks */,
 				CBC9CA0B1A88A4B900FAAE6D /* FacebookConnection.framework in Frameworks */,
+				CB2645951AA9D66E0062073A /* Bolts.framework in Frameworks */,
 				CBC9CA101A88A4B900FAAE6D /* ShareSDKCoreService.framework in Frameworks */,
 				CB1CF7E91A84EE7A00CCF560 /* libz.1.2.5.dylib in Frameworks */,
 				CBC9CA0C1A88A4B900FAAE6D /* SinaWeiboConnection.framework in Frameworks */,
@@ -147,9 +182,9 @@
 				CBC9CA1C1A88A4B900FAAE6D /* ShareSDKiPhoneSimpleShareViewUI.framework in Frameworks */,
 				CBC9CA131A88A4B900FAAE6D /* libWeiboSDK.a in Frameworks */,
 				CBC9CA0E1A88A4B900FAAE6D /* AGCommon.framework in Frameworks */,
+				CBC49ABC1AA9C5CB00701E86 /* Parse.framework in Frameworks */,
 				CB1CF7E31A84EE5600CCF560 /* CoreTelephony.framework in Frameworks */,
 				CB1CF7E11A84EE4B00CCF560 /* QuartzCore.framework in Frameworks */,
-				CB1CF7DF1A84EE3D00CCF560 /* SystemConfiguration.framework in Frameworks */,
 				CBC9CA181A88A4B900FAAE6D /* ShareSDKShareActionSheet.framework in Frameworks */,
 				CBC9CA171A88A4B900FAAE6D /* ShareSDKFlatShareViewUI.framework in Frameworks */,
 			);
@@ -213,6 +248,29 @@
 			name = StillMovie;
 			sourceTree = "<group>";
 		};
+		CB6E025B1AAA881C00453435 /* library */ = {
+			isa = PBXGroup;
+			children = (
+				CB2645921AA9CD120062073A /* Accounts.framework */,
+				CB2645901AA9CD040062073A /* Social.framework */,
+				CBC49ACB1AA9C83600701E86 /* libsqlite3.dylib */,
+				CBC49AC71AA9C7F400701E86 /* CoreLocation.framework */,
+				CBC49AC51AA9C7EA00701E86 /* CoreGraphics.framework */,
+				CBC49AC31AA9C7E100701E86 /* CFNetwork.framework */,
+				CBC49AC11AA9C7D900701E86 /* AudioToolbox.framework */,
+				CBC49ABF1AA9C68100701E86 /* MobileCoreServices.framework */,
+				CBC49ABD1AA9C66200701E86 /* StoreKit.framework */,
+				CBC9C9521A889FB400FAAE6D /* ImageIO.framework */,
+				CB1CF7EA1A84EE8300CCF560 /* Security.framework */,
+				CB1CF7E81A84EE7A00CCF560 /* libz.1.2.5.dylib */,
+				CB1CF7E41A84EE6200CCF560 /* libicucore.dylib */,
+				CB1CF7E21A84EE5600CCF560 /* CoreTelephony.framework */,
+				CB1CF7E01A84EE4B00CCF560 /* QuartzCore.framework */,
+				CB1CF7DE1A84EE3D00CCF560 /* SystemConfiguration.framework */,
+			);
+			name = library;
+			sourceTree = "<group>";
+		};
 		CB95D6C11A81D475000F3BD5 /* ShareMovie */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,13 +282,7 @@
 		CBC0425A1A25FC8800597951 = {
 			isa = PBXGroup;
 			children = (
-				CBC9C9521A889FB400FAAE6D /* ImageIO.framework */,
-				CB1CF7EA1A84EE8300CCF560 /* Security.framework */,
-				CB1CF7E81A84EE7A00CCF560 /* libz.1.2.5.dylib */,
-				CB1CF7E41A84EE6200CCF560 /* libicucore.dylib */,
-				CB1CF7E21A84EE5600CCF560 /* CoreTelephony.framework */,
-				CB1CF7E01A84EE4B00CCF560 /* QuartzCore.framework */,
-				CB1CF7DE1A84EE3D00CCF560 /* SystemConfiguration.framework */,
+				CB6E025B1AAA881C00453435 /* library */,
 				CBC042651A25FC8800597951 /* TryDemo */,
 				CBC0427D1A25FC8800597951 /* TryDemoTests */,
 				CBC042641A25FC8800597951 /* Products */,
@@ -240,8 +292,8 @@
 		CBC042641A25FC8800597951 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CBC042631A25FC8800597951 /* TryDemo.app */,
-				CBC0427A1A25FC8800597951 /* TryDemoTests.xctest */,
+				CBC042631A25FC8800597951 /* MagicCam.app */,
+				CBC0427A1A25FC8800597951 /* ICamMovTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -249,6 +301,8 @@
 		CBC042651A25FC8800597951 /* TryDemo */ = {
 			isa = PBXGroup;
 			children = (
+				CB2645941AA9D66E0062073A /* Bolts.framework */,
+				CBC49ABB1AA9C5CB00701E86 /* Parse.framework */,
 				CBC9C9ED1A88A4B900FAAE6D /* ShareSDK */,
 				CBD847531A359162002A261A /* TryDemo-Bridging-Header.h */,
 				CBC042681A25FC8800597951 /* AppDelegate.swift */,
@@ -258,6 +312,7 @@
 				CB95D6C11A81D475000F3BD5 /* ShareMovie */,
 				CBF5368A1A7F8310002CED5E /* Effects */,
 				CB1CF79D1A84828200CCF560 /* UI */,
+				CBD07A3F1AAAFCD600963F4A /* LoginViewController.swift */,
 				CBC0426E1A25FC8800597951 /* Main.storyboard */,
 				CB78ED191A64262700CBAD45 /* main.mov */,
 				CB78ED1A1A64262700CBAD45 /* prefix.mov */,
@@ -383,27 +438,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		CBC042621A25FC8800597951 /* TryDemo */ = {
+		CBC042621A25FC8800597951 /* ICamMov */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CBC042841A25FC8800597951 /* Build configuration list for PBXNativeTarget "TryDemo" */;
+			buildConfigurationList = CBC042841A25FC8800597951 /* Build configuration list for PBXNativeTarget "ICamMov" */;
 			buildPhases = (
 				CBC0425F1A25FC8800597951 /* Sources */,
 				CBC042601A25FC8800597951 /* Frameworks */,
 				CBC042611A25FC8800597951 /* Resources */,
-				CBC0428A1A2606B900597951 /* ShellScript */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = TryDemo;
+			name = ICamMov;
 			productName = TryDemo;
-			productReference = CBC042631A25FC8800597951 /* TryDemo.app */;
+			productReference = CBC042631A25FC8800597951 /* MagicCam.app */;
 			productType = "com.apple.product-type.application";
 		};
-		CBC042791A25FC8800597951 /* TryDemoTests */ = {
+		CBC042791A25FC8800597951 /* ICamMovTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CBC042871A25FC8800597951 /* Build configuration list for PBXNativeTarget "TryDemoTests" */;
+			buildConfigurationList = CBC042871A25FC8800597951 /* Build configuration list for PBXNativeTarget "ICamMovTests" */;
 			buildPhases = (
 				CBC042761A25FC8800597951 /* Sources */,
 				CBC042771A25FC8800597951 /* Frameworks */,
@@ -414,9 +468,9 @@
 			dependencies = (
 				CBC0427C1A25FC8800597951 /* PBXTargetDependency */,
 			);
-			name = TryDemoTests;
+			name = ICamMovTests;
 			productName = TryDemoTests;
-			productReference = CBC0427A1A25FC8800597951 /* TryDemoTests.xctest */;
+			productReference = CBC0427A1A25FC8800597951 /* ICamMovTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -430,6 +484,7 @@
 				TargetAttributes = {
 					CBC042621A25FC8800597951 = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = FL2H8E474Y;
 					};
 					CBC042791A25FC8800597951 = {
 						CreatedOnToolsVersion = 6.1;
@@ -437,7 +492,7 @@
 					};
 				};
 			};
-			buildConfigurationList = CBC0425E1A25FC8800597951 /* Build configuration list for PBXProject "TryDemo" */;
+			buildConfigurationList = CBC0425E1A25FC8800597951 /* Build configuration list for PBXProject "ICamMov" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -451,8 +506,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CBC042621A25FC8800597951 /* TryDemo */,
-				CBC042791A25FC8800597951 /* TryDemoTests */,
+				CBC042621A25FC8800597951 /* ICamMov */,
+				CBC042791A25FC8800597951 /* ICamMovTests */,
 			);
 		};
 /* End PBXProject section */
@@ -487,22 +542,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		CBC0428A1A2606B900597951 /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "export CODESIGN_ALLOCATE=/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/codesign_allocate\nif [ \"${PLATFORM_NAME}\" == \"iphoneos\" ] || [ \"${PLATFORM_NAME}\" == \"ipados\" ]; then\n/Applications/Xcode.app/Contents/Developer/iphoneentitlements/gen_entitlements.py \"my.company.${PROJECT_NAME}\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${PROJECT_NAME}.xcent\";\ncodesign -f -s \"iPhone Developer\" --entitlements \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${PROJECT_NAME}.xcent\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/\"\nfi";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		CBC0425F1A25FC8800597951 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -520,6 +559,7 @@
 				CBD847551A359162002A261A /* GenerateMovieFromImage.m in Sources */,
 				CB95D6C31A820308000F3BD5 /* ShareMovieViewController.swift in Sources */,
 				CBC042691A25FC8800597951 /* AppDelegate.swift in Sources */,
+				CBD07A401AAAFCD600963F4A /* LoginViewController.swift in Sources */,
 				CB1650821A31652700AB25DD /* EditMovieViewController.swift in Sources */,
 				CBC0426B1A25FC8800597951 /* HomeViewController.swift in Sources */,
 				CB1650801A3164E200AB25DD /* MoviePreviewView.swift in Sources */,
@@ -539,7 +579,7 @@
 /* Begin PBXTargetDependency section */
 		CBC0427C1A25FC8800597951 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CBC042621A25FC8800597951 /* TryDemo */;
+			target = CBC042621A25FC8800597951 /* ICamMov */;
 			targetProxy = CBC0427B1A25FC8800597951 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -590,7 +630,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Zongze Chen (EZ3726BMXP)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Zongze Chen (EZ3726BMXP)";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -634,7 +675,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Zongze Chen (EZ3726BMXP)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Zongze Chen (EZ3726BMXP)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -658,7 +700,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/TryDemo/ShareSDK/Connection",
@@ -669,6 +714,8 @@
 					"$(PROJECT_DIR)/TryDemo/ShareSDK/Extend/GooglePlusSDK",
 					"$(PROJECT_DIR)/TryDemo/ShareSDK/Extend/Pinterest.embeddedframework",
 					"$(PROJECT_DIR)/TryDemo/ShareSDK/Extend/RenRenSDK",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/TryDemo",
 				);
 				INFOPLIST_FILE = TryDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -681,7 +728,8 @@
 				);
 				OTHER_LDFLAGS = "-all_load";
 				"OTHER_LDFLAGS[arch=*]" = "-all_load";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MagicCam;
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "TryDemo/TryDemo-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -692,7 +740,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/TryDemo/ShareSDK/Connection",
@@ -703,6 +754,8 @@
 					"$(PROJECT_DIR)/TryDemo/ShareSDK/Extend/GooglePlusSDK",
 					"$(PROJECT_DIR)/TryDemo/ShareSDK/Extend/Pinterest.embeddedframework",
 					"$(PROJECT_DIR)/TryDemo/ShareSDK/Extend/RenRenSDK",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/TryDemo",
 				);
 				INFOPLIST_FILE = TryDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -715,7 +768,8 @@
 				);
 				OTHER_LDFLAGS = "-all_load";
 				"OTHER_LDFLAGS[arch=*]" = "-all_load";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = MagicCam;
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "TryDemo/TryDemo-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -735,8 +789,8 @@
 				);
 				INFOPLIST_FILE = TryDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TryDemo.app/TryDemo";
+				PRODUCT_NAME = ICamMovTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/魔视.app/魔视";
 			};
 			name = Debug;
 		};
@@ -750,15 +804,15 @@
 				);
 				INFOPLIST_FILE = TryDemoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TryDemo.app/TryDemo";
+				PRODUCT_NAME = ICamMovTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/魔视.app/魔视";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		CBC0425E1A25FC8800597951 /* Build configuration list for PBXProject "TryDemo" */ = {
+		CBC0425E1A25FC8800597951 /* Build configuration list for PBXProject "ICamMov" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CBC042821A25FC8800597951 /* Debug */,
@@ -767,7 +821,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CBC042841A25FC8800597951 /* Build configuration list for PBXNativeTarget "TryDemo" */ = {
+		CBC042841A25FC8800597951 /* Build configuration list for PBXNativeTarget "ICamMov" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CBC042851A25FC8800597951 /* Debug */,
@@ -776,7 +830,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CBC042871A25FC8800597951 /* Build configuration list for PBXNativeTarget "TryDemoTests" */ = {
+		CBC042871A25FC8800597951 /* Build configuration list for PBXNativeTarget "ICamMovTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CBC042881A25FC8800597951 /* Debug */,

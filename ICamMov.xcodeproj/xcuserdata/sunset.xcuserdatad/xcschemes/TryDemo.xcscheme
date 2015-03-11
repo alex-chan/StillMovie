@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CBC042621A25FC8800597951"
-               BuildableName = "TryDemo.app"
-               BlueprintName = "TryDemo"
-               ReferencedContainer = "container:TryDemo.xcodeproj">
+               BuildableName = "&#x9b54;&#x89c6;.app"
+               BlueprintName = "ICamMov"
+               ReferencedContainer = "container:ICamMov.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CBC042791A25FC8800597951"
-               BuildableName = "TryDemoTests.xctest"
-               BlueprintName = "TryDemoTests"
-               ReferencedContainer = "container:TryDemo.xcodeproj">
+               BuildableName = "ICamMovTests.xctest"
+               BlueprintName = "ICamMovTests"
+               ReferencedContainer = "container:ICamMov.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "CBC042791A25FC8800597951"
-               BuildableName = "TryDemoTests.xctest"
-               BlueprintName = "TryDemoTests"
-               ReferencedContainer = "container:TryDemo.xcodeproj">
+               BuildableName = "ICamMovTests.xctest"
+               BlueprintName = "ICamMovTests"
+               ReferencedContainer = "container:ICamMov.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CBC042621A25FC8800597951"
-            BuildableName = "TryDemo.app"
-            BlueprintName = "TryDemo"
-            ReferencedContainer = "container:TryDemo.xcodeproj">
+            BuildableName = "&#x9b54;&#x89c6;.app"
+            BlueprintName = "ICamMov"
+            ReferencedContainer = "container:ICamMov.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -77,9 +77,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CBC042621A25FC8800597951"
-            BuildableName = "TryDemo.app"
-            BlueprintName = "TryDemo"
-            ReferencedContainer = "container:TryDemo.xcodeproj">
+            BuildableName = "&#x9b54;&#x89c6;.app"
+            BlueprintName = "ICamMov"
+            ReferencedContainer = "container:ICamMov.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -111,9 +111,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "CBC042621A25FC8800597951"
-            BuildableName = "TryDemo.app"
-            BlueprintName = "TryDemo"
-            ReferencedContainer = "container:TryDemo.xcodeproj">
+            BuildableName = "&#x9b54;&#x89c6;.app"
+            BlueprintName = "ICamMov"
+            ReferencedContainer = "container:ICamMov.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

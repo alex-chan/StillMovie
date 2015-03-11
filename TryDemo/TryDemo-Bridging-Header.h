@@ -7,3 +7,5 @@
 #import <ShareSDK/ShareSDK.h>
 #import "WXApi.h"
 #import "WeiboSDK.h"
+
+#import <Parse/Parse.h>

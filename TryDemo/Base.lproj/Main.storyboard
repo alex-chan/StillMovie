@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="MG3-Yd-ttf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="MG3-Yd-ttf">
     <dependencies>
         <deployment version="2048" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -11,7 +10,7 @@
         <!--Main Tab View Controller-->
         <scene sceneID="LR4-5k-18d">
             <objects>
-                <tabBarController id="Vlx-4c-K3d" customClass="MainTabViewController" customModule="TryDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController id="Vlx-4c-K3d" customClass="MainTabViewController" customModule="iCamMov" customModuleProvider="target" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="smn-F0-S4l">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
@@ -32,7 +31,7 @@
         <!--Home-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController title="Home" id="9pv-A4-QxB" customClass="HomeViewController" customModule="TryDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Home" id="9pv-A4-QxB" customClass="HomeViewController" customModule="iCamMov" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ia1-K6-d13"/>
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
@@ -72,7 +71,7 @@
         <!--Account-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" userLabel="Account" customClass="AccountViewController" customModule="TryDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8rJ-Kc-sve" userLabel="Account" customClass="AccountViewController" customModule="iCamMov" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="L7p-HK-0SC"/>
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
@@ -112,7 +111,7 @@
         <!--PreTakeMovie-->
         <scene sceneID="byB-aI-0vh">
             <objects>
-                <viewController id="So9-jT-prq" userLabel="PreTakeMovie" customClass="PreTakeMovieViewController" customModule="TryDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="So9-jT-prq" userLabel="PreTakeMovie" customClass="PreTakeMovieViewController" customModule="iCamMov" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="d5W-4Y-Jek"/>
                         <viewControllerLayoutGuide type="bottom" id="a06-4A-GgD"/>
@@ -128,10 +127,43 @@
             </objects>
             <point key="canvasLocation" x="-902" y="774"/>
         </scene>
+        <!--Login-->
+        <scene sceneID="aiH-iE-QmP">
+            <objects>
+                <viewController storyboardIdentifier="sid_vc_login" id="7zk-sH-Qf4" userLabel="Login" customClass="LoginViewController" customModule="iCamMov" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hWy-pK-hqL"/>
+                        <viewControllerLayoutGuide type="bottom" id="zbE-Md-51f"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1bK-Fa-fdp">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6tS-Ni-GUt">
+                                <rect key="frame" x="261" y="292" width="79" height="16"/>
+                                <state key="normal" backgroundImage="SinaWeiboLogin">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sinaweibologin:" destination="7zk-sH-Qf4" eventType="touchUpInside" id="ngz-if-gNS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="6tS-Ni-GUt" secondAttribute="centerX" id="0KY-uh-v1Q"/>
+                            <constraint firstAttribute="centerY" secondItem="6tS-Ni-GUt" secondAttribute="centerY" id="9NH-tP-nXC"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AG1-G5-ePS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-104" y="781"/>
+        </scene>
         <!--TakeMovie-->
         <scene sceneID="Omi-tU-fpJ">
             <objects>
-                <viewController title="TakeMovie" id="xqs-0u-GGp" customClass="TakeMovieViewController" customModule="TryDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="TakeMovie" id="xqs-0u-GGp" customClass="TakeMovieViewController" customModule="iCamMov" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="h4L-sJ-gjE"/>
                         <viewControllerLayoutGuide type="bottom" id="ugW-At-Q6f"/>
@@ -160,7 +192,7 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rjh-pz-def" userLabel="TakeMovie" customClass="TakeMovieView" customModule="TryDemo" customModuleProvider="target">
+                            <view clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rjh-pz-def" userLabel="TakeMovie" customClass="TakeMovieView" customModule="iCamMov" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="64" width="600" height="450"/>
                                 <subviews>
                                     <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Rl-EX-I1Y" userLabel="ChangeCamera">
@@ -330,7 +362,7 @@
         <!--EditMovie-->
         <scene sceneID="5yj-7m-6bk">
             <objects>
-                <viewController id="CfO-k4-vzz" userLabel="EditMovie" customClass="EditMovieViewController" customModule="TryDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="CfO-k4-vzz" userLabel="EditMovie" customClass="EditMovieViewController" customModule="iCamMov" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="epJ-76-sed"/>
                         <viewControllerLayoutGuide type="bottom" id="ddU-wO-Wy5"/>
@@ -373,11 +405,17 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="28l-oi-2MX" userLabel="MoviePreviewView" customClass="MoviePreviewView" customModule="iCamMov" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="64" width="600" height="450"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="28l-oi-2MX" secondAttribute="height" multiplier="4:3" id="VuP-Uc-edk"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1zh-AC-8Fa" userLabel="PreviewAction">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="16" y="514" width="568" height="86"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f3M-f9-n5U" userLabel="PreviewBtn">
-                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <rect key="frame" x="257" y="28" width="54" height="30"/>
                                         <state key="normal" title="Preview">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -388,76 +426,25 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="centerX" secondItem="f3M-f9-n5U" secondAttribute="centerX" id="YKE-SI-ssl"/>
-                                    <constraint firstAttribute="centerY" secondItem="f3M-f9-n5U" secondAttribute="centerY" id="eLp-Tm-oNm"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="subviews">
-                                        <exclude reference="f3M-f9-n5U"/>
-                                    </mask>
-                                    <mask key="constraints">
-                                        <exclude reference="YKE-SI-ssl"/>
-                                        <exclude reference="eLp-Tm-oNm"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular">
-                                    <mask key="subviews">
-                                        <include reference="f3M-f9-n5U"/>
-                                    </mask>
-                                    <mask key="constraints">
-                                        <include reference="YKE-SI-ssl"/>
-                                        <include reference="eLp-Tm-oNm"/>
-                                    </mask>
-                                </variation>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="28l-oi-2MX" userLabel="MoviePreviewView" customClass="MoviePreviewView" customModule="TryDemo" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="64" width="600" height="450"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="28l-oi-2MX" secondAttribute="height" multiplier="4:3" id="VuP-Uc-edk"/>
+                                    <constraint firstAttribute="centerX" secondItem="f3M-f9-n5U" secondAttribute="centerX" id="C2R-bK-Wwx"/>
+                                    <constraint firstAttribute="centerY" secondItem="f3M-f9-n5U" secondAttribute="centerY" id="etT-q2-e0d"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="zjK-a3-kXm" secondAttribute="trailing" constant="-16" id="8Tu-nf-pKo"/>
+                            <constraint firstItem="1zh-AC-8Fa" firstAttribute="leading" secondItem="aqB-wk-vAg" secondAttribute="leadingMargin" id="9M5-y4-cRH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1zh-AC-8Fa" secondAttribute="trailing" id="9g4-bL-3Es"/>
                             <constraint firstItem="zjK-a3-kXm" firstAttribute="leading" secondItem="aqB-wk-vAg" secondAttribute="leadingMargin" constant="-16" id="Be3-gk-85T"/>
-                            <constraint firstItem="1zh-AC-8Fa" firstAttribute="top" secondItem="28l-oi-2MX" secondAttribute="bottom" id="Ixx-k6-sb2"/>
-                            <constraint firstItem="1zh-AC-8Fa" firstAttribute="leading" secondItem="aqB-wk-vAg" secondAttribute="leadingMargin" constant="-7" id="Kse-cu-YbY"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="1zh-AC-8Fa" secondAttribute="trailing" id="LqI-iB-1vo"/>
-                            <constraint firstItem="1zh-AC-8Fa" firstAttribute="leading" secondItem="aqB-wk-vAg" secondAttribute="leadingMargin" id="M2w-No-8SF"/>
+                            <constraint firstItem="ddU-wO-Wy5" firstAttribute="top" secondItem="1zh-AC-8Fa" secondAttribute="bottom" id="Jfk-a6-sH0"/>
+                            <constraint firstItem="1zh-AC-8Fa" firstAttribute="top" secondItem="28l-oi-2MX" secondAttribute="bottom" id="Lwf-K6-TvO"/>
                             <constraint firstItem="28l-oi-2MX" firstAttribute="leading" secondItem="aqB-wk-vAg" secondAttribute="leadingMargin" constant="-16" id="TP5-cN-HEG"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="1zh-AC-8Fa" secondAttribute="trailing" id="VeJ-6U-Cir"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="1zh-AC-8Fa" secondAttribute="bottom" id="kpf-sb-rwE"/>
                             <constraint firstItem="28l-oi-2MX" firstAttribute="top" secondItem="zjK-a3-kXm" secondAttribute="bottom" id="tBQ-bn-Kir"/>
                             <constraint firstAttribute="trailingMargin" secondItem="28l-oi-2MX" secondAttribute="trailing" constant="-16" id="vGA-WI-dWo"/>
                             <constraint firstItem="zjK-a3-kXm" firstAttribute="top" secondItem="epJ-76-sed" secondAttribute="bottom" id="vST-Ks-DUV"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="1zh-AC-8Fa"/>
-                            </mask>
-                            <mask key="constraints">
-                                <exclude reference="Ixx-k6-sb2"/>
-                                <exclude reference="Kse-cu-YbY"/>
-                                <exclude reference="LqI-iB-1vo"/>
-                                <exclude reference="M2w-No-8SF"/>
-                                <exclude reference="VeJ-6U-Cir"/>
-                                <exclude reference="kpf-sb-rwE"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular">
-                            <mask key="subviews">
-                                <include reference="1zh-AC-8Fa"/>
-                            </mask>
-                            <mask key="constraints">
-                                <include reference="Ixx-k6-sb2"/>
-                                <exclude reference="Kse-cu-YbY"/>
-                                <include reference="LqI-iB-1vo"/>
-                                <include reference="M2w-No-8SF"/>
-                                <include reference="VeJ-6U-Cir"/>
-                                <include reference="kpf-sb-rwE"/>
-                            </mask>
-                        </variation>
+                        <variation key="heightClass=regular"/>
                     </view>
                     <connections>
                         <outlet property="playerView" destination="28l-oi-2MX" id="tVj-Iv-taX"/>
@@ -471,7 +458,7 @@
         <!--ShareMovie-->
         <scene sceneID="I5p-rQ-65i">
             <objects>
-                <viewController id="MG3-Yd-ttf" userLabel="ShareMovie" customClass="ShareMovieViewController" customModule="TryDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="MG3-Yd-ttf" userLabel="ShareMovie" customClass="ShareMovieViewController" customModule="iCamMov" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GyV-Rk-1SE"/>
                         <viewControllerLayoutGuide type="bottom" id="suH-cq-On5"/>
@@ -481,7 +468,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m6i-lR-p3M">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <rect key="frame" x="16" y="20" width="568" height="44"/>
                                 <items>
                                     <navigationItem id="mZp-A4-bw4">
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="i9g-HD-kqU">
@@ -493,28 +480,15 @@
                                 </items>
                             </navigationBar>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KxK-Ud-8rR">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <rect key="frame" x="250" y="84" width="100" height="132"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="132" id="aNJ-D5-hjc">
-                                        <variation key="heightClass=regular" constant="100"/>
-                                    </constraint>
+                                    <constraint firstAttribute="height" constant="132" id="aNJ-D5-hjc"/>
                                     <constraint firstAttribute="width" constant="100" id="nOl-ec-Eg0"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="aNJ-D5-hjc"/>
-                                        <exclude reference="nOl-ec-Eg0"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular">
-                                    <mask key="constraints">
-                                        <include reference="aNJ-D5-hjc"/>
-                                        <include reference="nOl-ec-Eg0"/>
-                                    </mask>
-                                </variation>
+                                <variation key="heightClass=regular"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a9p-rA-73C">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <rect key="frame" x="280" y="266" width="40" height="30"/>
                                 <state key="normal" title="Share"/>
                                 <variation key="heightClass=regular" fixedFrame="YES">
                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
@@ -527,42 +501,15 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="KxK-Ud-8rR" firstAttribute="top" secondItem="m6i-lR-p3M" secondAttribute="bottom" constant="77" id="CMF-OS-fIh">
-                                <variation key="heightClass=regular" constant="10"/>
-                            </constraint>
-                            <constraint firstItem="m6i-lR-p3M" firstAttribute="leading" secondItem="8Ed-vr-t8I" secondAttribute="leading" id="KOm-Ev-wox"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="m6i-lR-p3M" secondAttribute="trailing" id="T6X-fo-0zI"/>
-                            <constraint firstAttribute="centerX" secondItem="KxK-Ud-8rR" secondAttribute="centerX" id="TAf-WN-Ag3"/>
-                            <constraint firstItem="m6i-lR-p3M" firstAttribute="top" secondItem="GyV-Rk-1SE" secondAttribute="bottom" id="rcA-kP-V0Y"/>
+                            <constraint firstItem="m6i-lR-p3M" firstAttribute="bottom" secondItem="KxK-Ud-8rR" secondAttribute="top" constant="-20" id="Qti-eb-1hK"/>
+                            <constraint firstItem="m6i-lR-p3M" firstAttribute="leading" secondItem="8Ed-vr-t8I" secondAttribute="leadingMargin" id="SP3-9s-Zon"/>
+                            <constraint firstAttribute="centerX" secondItem="KxK-Ud-8rR" secondAttribute="centerX" id="e0Y-BA-CGp"/>
+                            <constraint firstItem="KxK-Ud-8rR" firstAttribute="bottom" secondItem="a9p-rA-73C" secondAttribute="top" constant="-50" id="gnv-Hi-N5h"/>
+                            <constraint firstAttribute="centerX" secondItem="a9p-rA-73C" secondAttribute="centerX" id="mdk-W9-2q9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="m6i-lR-p3M" secondAttribute="trailing" id="q0i-VL-0Rr"/>
+                            <constraint firstItem="GyV-Rk-1SE" firstAttribute="top" secondItem="m6i-lR-p3M" secondAttribute="top" id="vvi-uD-ra7"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="m6i-lR-p3M"/>
-                                <exclude reference="KxK-Ud-8rR"/>
-                                <exclude reference="a9p-rA-73C"/>
-                            </mask>
-                            <mask key="constraints">
-                                <exclude reference="KOm-Ev-wox"/>
-                                <exclude reference="T6X-fo-0zI"/>
-                                <exclude reference="rcA-kP-V0Y"/>
-                                <exclude reference="CMF-OS-fIh"/>
-                                <exclude reference="TAf-WN-Ag3"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular">
-                            <mask key="subviews">
-                                <include reference="m6i-lR-p3M"/>
-                                <include reference="KxK-Ud-8rR"/>
-                                <include reference="a9p-rA-73C"/>
-                            </mask>
-                            <mask key="constraints">
-                                <include reference="KOm-Ev-wox"/>
-                                <include reference="T6X-fo-0zI"/>
-                                <include reference="rcA-kP-V0Y"/>
-                                <include reference="CMF-OS-fIh"/>
-                                <include reference="TAf-WN-Ag3"/>
-                            </mask>
-                        </variation>
+                        <variation key="heightClass=regular"/>
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
@@ -574,6 +521,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="SinaWeiboLogin" width="79" height="16"/>
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
     </resources>
